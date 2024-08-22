@@ -56,10 +56,10 @@ class hocsinh:
         status.current()
     def login(self):
         username = self.entry_username.get()
-        password = self.entry_password.get()
-        confirm_password = self.entry_confirm_password.get()
+        classs = self.entry_class.get()
+        phone = self.entry_phone.get()
         gmail = self.entry_gmail.get()
-        if not self.entry_username.get() or not self.entry_class.get() or not self.entry_phone.get() or not self.entry_gmail.get():
+        if not self.entry_username.get() or not self.entry_classs.get() or not self.entry_phone.get() or not self.entry_gmail.get():
             print("False")
         else:
             print("True")
