@@ -2,7 +2,7 @@ import tkinter as tk
 from tkinter import ttk
 from tkinter import messagebox
 
-class quanLyHocSinh:
+class quanLyDiemSo:
     def __init__(self,master):
         self.master = master
         self.master.title("Quản lí Học Sinh")
@@ -102,6 +102,6 @@ class quanLyHocSinh:
 
 if __name__ == "__main__":
     root = tk.Tk()
-    app = quanLyHocSinh(root)
+    app = quanLyDiemSo(root)
     root.mainloop()
     root.geometry()
