@@ -1,0 +1,56 @@
+[
+    {
+        "name": "Nguyễn Thiên Di",
+        "grade": 10,
+        "math_point": 9,
+        "literature_point":8,
+        "english_point":10,
+        "chemistry_point":9,
+        "physic_point":10
+    },
+    {
+        "name": "Phạm Anh Kiệt",
+        "grade": 10,
+        "math_point": 7,
+        "literature_point":6,
+        "english_point":9,
+        "chemistry_point":9,
+        "physic_point":10
+    },
+    {
+        "name": "Hwang Jin Woo",
+        "grade": 10,
+        "math_point": 9,
+        "literature_point":8,
+        "english_point":10,
+        "chemistry_point":9,
+        "physic_point":10
+    },
+    {
+        "name": "Tseng Yu Nguyên",
+        "grade": 1,
+        "math_point": 8,
+        "literature_point":8,
+        "english_point":10,
+        "chemistry_point":9,
+        "physic_point":10
+    },
+    {
+        "name": "Đoàn Gia Khang",
+        "grade": 10,
+        "math_point": 8,
+        "literature_point":7,
+        "english_point":7,
+        "chemistry_point":9,
+        "physic_point":10
+    },
+    {
+        "name": "Trần Mạnh Nguyên",
+        "grade": 10,
+        "math_point": 8,
+        "literature_point":7,
+        "english_point":7,
+        "chemistry_point":9,
+        "physic_point":10
+    }
+]
