@@ -42,13 +42,13 @@ class quanLyHocSinh:
         self.label_gender.place(x =-136, y= self.Ty*4 )
         #button
         
-        self.luuLopHoc_button = tk.Button(self.master, text='Thêm', command=self.luuLopHoc)
+        self.luuLopHoc_button = tk.Button(self.master, text='Thêm', command=self.luuLopHoc , width=self.width)
         self.luuLopHoc_button.place(x=self.x + 190, y=self.Ty * 6)
 
-        self.luuLopHoc_button = tk.Button(self.master, text='Sửa', command=self.luuLopHoc)
+        self.luuLopHoc_button = tk.Button(self.master, text='Sửa', command=self.luuLopHoc , width=self.width)
         self.luuLopHoc_button.place(x=self.x + 260, y=self.Ty * 6)
 
-        self.luuLopHoc_button = tk.Button(self.master, text='Xóa', command=self.luuLopHoc)
+        self.luuLopHoc_button = tk.Button(self.master, text='Xóa', command=self.luuLopHoc , width=self.width)
         self.luuLopHoc_button.place(x=self.x + 330, y=self.Ty * 6)
         
         
