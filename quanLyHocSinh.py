@@ -6,7 +6,9 @@ class quanLyHocSinh:
         self.master = master
         self.master.title("Quản lí Học Sinh")
         self.master.geometry("400x400")
+        
         self.widthEntry = self.width = 45
+        self.width = 5
         self.x = 0
         self.y = 0
         self.Tx = 100
@@ -39,8 +41,18 @@ class quanLyHocSinh:
         self.label_gender = tk.Label(self.master, text = "Giới tính",width=self.widthEntry)
         self.label_gender.place(x =-136, y= self.Ty*4 )
         #button
-        self.button_register = tk.Button(self.master, text = "REGISTER", command = self.login)
-        self.button_register.place(x=150, y=300)
+        
+        self.luuLopHoc_button = tk.Button(self.master, text='Thêm', command=self.luuLopHoc)
+        self.luuLopHoc_button.place(x=self.x + 235, y=self.Ty * 6)
+
+        self.luuLopHoc_button = tk.Button(self.master, text='Sửa', command=self.luuLopHoc)
+        self.luuLopHoc_button.place(x=self.x + 300, y=self.Ty * 6)
+
+        self.luuLopHoc_button = tk.Button(self.master, text='Xóa', command=self.luuLopHoc)
+        self.luuLopHoc_button.place(x=self.x + 350, y=self.Ty * 6)
+        
+        
+        
         #tình trạng
         self.label_status = tk.Label(self.master, text = "Trạng thái",width=self.widthEntry)
         self.label_status.place(x =-135 , y=self.Ty*5)
@@ -73,7 +85,10 @@ class quanLyHocSinh:
             print("True")
         
         
-        
+    def luuLopHoc(self):
+        # Implement save functionality here
+        pass
+
         
         
         
