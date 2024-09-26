@@ -99,7 +99,7 @@ class quanLyDiemSo:
                 "chemistry_point": float(self.entry_point_chemistry.get()),
                 "physic_point": float(self.entry_point_physic.get())
             }
-            main.save_to_json(student_data)
+            main.save_to_json(student_data,'./data/quanLyDiemSo.json')
             
     
             
