@@ -1,14 +1,15 @@
 import tkinter as tk
 from tkinter import ttk
 from tkinter import messagebox
-import main
 
 class quanLyDiemSo:
     def __init__(self,master):
         self.master = master
-        # self.master.title("Quản lí Học Sinh")
-        # self.master.geometry("400x400")
+        self.master.title("Quản lí Học Sinh")
+        self.master.geometry("400x400")
+        
         self.widthEntry = self.width = 45
+        self.width = 5
         self.x = 0
         self.y = 0
         self.Tx = 100
@@ -55,11 +56,17 @@ class quanLyDiemSo:
         #Point
         self.entry_point_chemistry = tk.Entry(self.master,width=self.widthEntry)
         self.entry_point_chemistry.place(x=self.Tx, y=self.Ty*6)
+
+#button
+        self.luuLopHoc_button = tk.Button(self.master, text='Thêm', command=self.luuLopHoc,width=self.width)
+        self.luuLopHoc_button.place(x=self.x + 190, y=self.Ty * 7)
+
+        self.luuLopHoc_button = tk.Button(self.master, text='Sửa', command=self.luuLopHoc,width=self.width)
+        self.luuLopHoc_button.place(x=self.x + 260, y=self.Ty * 7)
+
+        self.luuLopHoc_button = tk.Button(self.master, text='Xóa', command=self.luuLopHoc,width=self.width)
+        self.luuLopHoc_button.place(x=self.x + 330, y=self.Ty * 7)
         
-        
-        #button
-        self.button_submit = tk.Button(self.master, text = "SAVE", command = self.check_submit)
-        self.button_submit.place(x=150, y=350)
     def checkInput(self): 
         if not self.entry_username.get() or not self.entry_class.get() or not self.entry_point_literature.get() or not self.entry_point_math.get()or not self.entry_point_english.get() or not self.entry_point_chemistry.get() or not self.entry_point_physic:
             messagebox.showerror(title='Error', message='Bạn chưa nhập đủ thông tin')
@@ -81,23 +88,33 @@ class quanLyDiemSo:
             return False
         return True
     def check_submit(self):
-        if self.checkInput():
-            student_data = {
-                "name": self.entry_username.get(),
-                "grade": self.entry_class.get(),
-                "math_point": float(self.entry_point_math.get()),
-                "literature_point": float(self.entry_point_literature.get()),
-                "english_point": float(self.entry_point_english.get()),
-                "chemistry_point": float(self.entry_point_chemistry.get()),
-                "physic_point": float(self.entry_point_physic.get())
-            }
-            main.save_to_json(student_data)
-
-
+        if self.checkInput()== True:
+            username = self.entry_username.get()
+            classs = self.entry_class.get()
+            literature = self.entry_point_literature.get()
+            math = self.entry_point_math.get()
+            english = self.entry_point_english.get()
+            chemistry = self.entry_point_chemistry.get()
+            physic = self.entry_point_physic.get()
             
+    
+            
+        
+           
+        
+    def luuLopHoc(self):
+        # Implement save functionality here
+        pass
+
+        
+        
+        
+
+
 if __name__ == "__main__":
     root = tk.Tk()
     app = quanLyDiemSo(root)
     root.mainloop()
     root.geometry()
-   
+
+#viên     
