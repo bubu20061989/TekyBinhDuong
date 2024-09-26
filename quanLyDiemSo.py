@@ -1,12 +1,13 @@
 import tkinter as tk
 from tkinter import ttk
 from tkinter import messagebox
+import main
 
 class quanLyDiemSo:
     def __init__(self,master):
         self.master = master
-        self.master.title("Quản lí Học Sinh")
-        self.master.geometry("400x400")
+        # self.master.title("Quản lí Học Sinh")
+        # self.master.geometry("400x400")
         self.widthEntry = self.width = 45
         self.x = 0
         self.y = 0
@@ -57,7 +58,7 @@ class quanLyDiemSo:
         
         
         #button
-        self.button_submit = tk.Button(self.master, text = "REGISTER", command = self.check_submit)
+        self.button_submit = tk.Button(self.master, text = "SAVE", command = self.check_submit)
         self.button_submit.place(x=150, y=350)
     def checkInput(self): 
         if not self.entry_username.get() or not self.entry_class.get() or not self.entry_point_literature.get() or not self.entry_point_math.get()or not self.entry_point_english.get() or not self.entry_point_chemistry.get() or not self.entry_point_physic:
@@ -80,30 +81,23 @@ class quanLyDiemSo:
             return False
         return True
     def check_submit(self):
-        if self.checkInput()== True:
-            username = self.entry_username.get()
-            classs = self.entry_class.get()
-            literature = self.entry_point_literature.get()
-            math = self.entry_point_math.get()
-            english = self.entry_point_english.get()
-            chemistry = self.entry_point_chemistry.get()
-            physic = self.entry_point_physic.get()
-            
-    
-            
-        
-           
-        
-        
-        
-        
-        
+        if self.checkInput():
+            student_data = {
+                "name": self.entry_username.get(),
+                "grade": self.entry_class.get(),
+                "math_point": float(self.entry_point_math.get()),
+                "literature_point": float(self.entry_point_literature.get()),
+                "english_point": float(self.entry_point_english.get()),
+                "chemistry_point": float(self.entry_point_chemistry.get()),
+                "physic_point": float(self.entry_point_physic.get())
+            }
+            main.save_to_json(student_data)
 
 
+            
 if __name__ == "__main__":
     root = tk.Tk()
     app = quanLyDiemSo(root)
     root.mainloop()
     root.geometry()
-
-#viên     
+   
