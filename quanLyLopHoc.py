@@ -83,17 +83,11 @@ class quanLyLopHoc:
         
     def luuLopHoc(self):
         Lop = self.entry_lop.get()
-        print(Lop)
         phong_hoc = self.entry_phong_hoc.get()
-        print(phong_hoc)
         gvcn = self.entry_GVCN.get()
-        print(gvcn)
         lop_truong = self.entry_lop_truong.get()
-        print(lop_truong)
         lop_pho = self.entry_lop_pho.get()
-        print(lop_pho)
         soluonghs = self.entry_soluonghs.get()
-        print(soluonghs)
 
         
 if __name__ == "__main__":

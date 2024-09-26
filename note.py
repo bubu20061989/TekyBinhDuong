@@ -56,3 +56,7 @@ if __name__ == "__main__":
     app = note(root)#"note" bên trong phải cùng tên với "class" phía trên
     root.mainloop()
     root.geometry()
+
+
+
+    #  viên  

@@ -105,3 +105,5 @@ if __name__ == "__main__":
     app = quanLyDiemSo(root)
     root.mainloop()
     root.geometry()
+
+#viên     

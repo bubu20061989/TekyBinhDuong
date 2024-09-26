@@ -28,7 +28,7 @@ class login :
         
     def login(self):
         if not self.entry_mat_khau.get() or not self.entry_user_name.get():
-            print("Sai rồi")
+            print("Sai rồiiii")
         if self.entry_mat_khau.get() == '123456' and self.entry_user_name.get() == 'admin':
             print("Đúng")
         
@@ -38,3 +38,5 @@ if __name__=="__main__":
     root = tk.Tk()
     app = login(root)
     root.mainloop()
+
+#viên 

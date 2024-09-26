@@ -84,3 +84,6 @@ if __name__ == "__main__":
     app = quanLyHocSinh(root)
     root.mainloop()
     root.geometry()
+
+
+#viên 

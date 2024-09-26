@@ -63,3 +63,6 @@ if __name__=="__main__":
     root = tk.Tk()
     app = dragon(root)
     root.mainloop()
+    
+    
+#viên 
