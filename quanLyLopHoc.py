@@ -7,7 +7,7 @@ class quanLyLopHoc:
         self.master.geometry('400x400')
         
         self.widthEntry = 45
-        
+        self.width = 5
         self.x = 0
         self.y = 0
 
@@ -50,9 +50,16 @@ class quanLyLopHoc:
         
         self.entry_soluonghs = tk.Entry(self.master,width = self.widthEntry)
         self.entry_soluonghs.place(x = self.x + self.Tx, y = self.Tlbly * 5 )
-        
-        self.luuLopHoc_button = tk.Button(self.master,text = 'Lưu lớp học',command = self.luuLopHoc)
-        self.luuLopHoc_button.place(x = self.x + 175, y = self.Tlbly * 6 )
+# button
+        self.luuLopHoc_button = tk.Button(self.master, text='Thêm', command=self.luuLopHoc,width=self.width)
+        self.luuLopHoc_button.place(x=self.x + 190, y=self.Tlbly * 6)
+
+        self.luuLopHoc_button = tk.Button(self.master, text='Sửa', command=self.luuLopHoc,width=self.width)
+        self.luuLopHoc_button.place(x=self.x + 260, y=self.Tlbly * 6)
+
+        self.luuLopHoc_button = tk.Button(self.master, text='Xóa', command=self.luuLopHoc,width=self.width)
+        self.luuLopHoc_button.place(x=self.x + 330, y=self.Tlbly * 6)
+
 
     
     def checkNumber(self, string):
@@ -88,6 +95,12 @@ class quanLyLopHoc:
         lop_truong = self.entry_lop_truong.get()
         lop_pho = self.entry_lop_pho.get()
         soluonghs = self.entry_soluonghs.get()
+
+
+
+    def luuLopHoc(self):
+        # Implement save functionality here
+        pass
 
         
 if __name__ == "__main__":

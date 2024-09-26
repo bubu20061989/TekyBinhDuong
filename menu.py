@@ -2,6 +2,9 @@ import tkinter as tk
 from tkinter import Menu
 import quanLyChuyenCan  # Import your class file
 import quanLyDiemSo
+import quanLyHocSinh
+import quanLyHocTap
+import quanLyLopHoc
 
 
 
@@ -21,25 +24,30 @@ class MenuApp:
 
         self.new_item.add_separator()
 
-        # Add 'Chuyên cần' as a top-level menu item
-        self.new_item.add_command(label="Chuyên cần", command=self.open_chuyen_can)
+
         
         # Add 'Quản lý chuyên cần' as another top-level menu item
         self.new_item.add_command(label="Quản lý chuyên cần", command=self.open_quan_ly_chuyen_can)
 
         self.new_item.add_command(label="Quản lý điểm số", command=self.open_quan_ly_diem_so)
+        
+        self.new_item.add_command(label="Quản lý học sinh", command=self.open_quan_ly_hoc_sinh)
+        
+        self.new_item.add_command(label="Quản lý học tập", command=self.open_quan_ly_hoc_tap)
+        
+        self.new_item.add_command(label="Quản lý lớp học", command=self.open_quan_ly_lop_hoc)
 
 
         # Frame to hold the content
         self.content_frame = tk.Frame(self.master)
         self.content_frame.pack(fill=tk.BOTH, expand=True)
 
-    def open_chuyen_can(self):
+    #def open_chuyen_can(self):
         # Clear the current content frame
-        for widget in self.content_frame.winfo_children():
-            widget.destroy()
+        #for widget in self.content_frame.winfo_children():
+            #widget.destroy()
         # You can implement your Chuyên cần functionality here
-        app = quanLyDiemSo.quanLyDiemSo(self.content_frame)
+        #app = quanLyDiemSo.quanLyDiemSo(self.content_frame)
 
     def open_quan_ly_chuyen_can(self):
         # Clear the current content frame
@@ -54,6 +62,27 @@ class MenuApp:
             widget.destroy()
         # Load the attendance management interface
         app = quanLyDiemSo.quanLyDiemSo(self.content_frame)
+    
+    def open_quan_ly_hoc_sinh(self):
+        # Clear the current content frame
+        for widget in self.content_frame.winfo_children():
+            widget.destroy()
+        # Load the attendance management interface
+        app = quanLyHocSinh.quanLyHocSinh(self.content_frame)
+    
+    def open_quan_ly_hoc_tap(self):
+        # Clear the current content frame
+        for widget in self.content_frame.winfo_children():
+            widget.destroy()
+        # Load the attendance management interface
+        app = quanLyHocTap.quanLyHocTap(self.content_frame)
+        
+    def open_quan_ly_lop_hoc(self):
+        # Clear the current content frame
+        for widget in self.content_frame.winfo_children():
+            widget.destroy()
+        # Load the attendance management interface
+        app = quanLyLopHoc.quanLyLopHoc(self.content_frame)
 
 
 

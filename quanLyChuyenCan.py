@@ -9,6 +9,7 @@ class quanLyChuyenCan:
         self.master.geometry('400x400')  # Remove this line
 
         self.widthEntry = 45
+        self.width = 5
         self.x = 0
         self.y = 0
         self.Tlbly = 50
@@ -25,8 +26,22 @@ class quanLyChuyenCan:
         self.entry_lop_hoc = tk.Entry(self.master, width=self.widthEntry)
         self.entry_lop_hoc.place(x=self.x + 100, y=self.Tlbly)
 
-        self.luuLopHoc_button = tk.Button(self.master, text='Lưu chuyên cần', command=self.luuLopHoc)
-        self.luuLopHoc_button.place(x=self.x + 175, y=self.Tlbly * 4)
+        self.label_lop_hoc = tk.Label(self.master, text='Có phép/Ko phép:')
+        self.label_lop_hoc.place(x=self.x, y=self.Tlbly+50)
+
+        self.label_lop_hoc = tk.Label(self.master, text='Lý do nghỉ:')
+        self.label_lop_hoc.place(x=self.x, y=self.Tlbly+100)
+
+
+# button
+        self.luuLopHoc_button = tk.Button(self.master, text='Thêm', command=self.luuLopHoc,width=self.width)
+        self.luuLopHoc_button.place(x=self.x + 190, y=self.Tlbly * 4)
+
+        self.luuLopHoc_button = tk.Button(self.master, text='Sửa', command=self.luuLopHoc,width=self.width)
+        self.luuLopHoc_button.place(x=self.x + 260, y=self.Tlbly * 4)
+
+        self.luuLopHoc_button = tk.Button(self.master, text='Xóa', command=self.luuLopHoc,width=self.width)
+        self.luuLopHoc_button.place(x=self.x + 330, y=self.Tlbly * 4)
 
         self.CPvaKPValue = tk.StringVar() 
         CPvaKP = ttk.Combobox(self.master, width=self.widthEntry, textvariable=self.CPvaKPValue)
