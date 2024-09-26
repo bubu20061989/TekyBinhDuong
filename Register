@@ -7,6 +7,7 @@ class register :
         self.master.title("dragon")
         self.master.geometry('400x400')
         self.widthEntry=40
+        
         self.label_username = tk.Label(self.master,text="Username")
         self.label_username.place(x = 0 , y = 0)
         
@@ -20,33 +21,32 @@ class register :
         self.entry_keyword = tk.Entry(self.master,width = self.widthEntry)
         self.entry_keyword.place (x =100 ,  y = 60)
 
-        self.label_cfkeyword = tk.Label(self.master,text="Cfkeyword")
+        self.label_cfkeyword = tk.Label(self.master,text="Confirm keyword")
         self.label_cfkeyword.place(x =1  , y = 120)
 
         self.entry_cfkeyword = tk.Entry(self.master,width = self.widthEntry)
         self.entry_cfkeyword.place (x =100 ,  y = 120)
 
-        self.label_gioitinh = tk.Label(self.master,text="Chon gioi tinh")
+        self.label_gioitinh = tk.Label(self.master,text="Chọn giới tính")
         self.label_gioitinh.place(x=1,y=180)
 
         n = tk.StringVar() 
-        self.entry_gioitinh = ttk.Combobox(self.master,width = self.widthEntry, textvariable = n) 
+        self.entry_gioitinh = ttk.Combobox(self.master, width = 37, textvariable = n) 
         
         # Adding combobox drop down list 
-        self.entry_gioitinh['values'] = (' boy',  
-                                ' girl')
+        self.entry_gioitinh['values'] = (' Boy',  
+                                ' Girl')
         
         self.entry_gioitinh.place(x =100,y=180)
         self.entry_gioitinh.current()
 
-
-        self.label_email = tk.Label(self.master,text="Nhap email")
+        self.label_email = tk.Label(self.master,text="Nhập email")
         self.label_email.place(x=1,y=240)
 
         self.entry_email = tk.Entry(self.master,width = self.widthEntry)
         self.entry_email.place(x=100,y=240)
 
-        self.button_register = tk.Button(self.master, text = "Register", command= self.ten,width=20)
+        self.button_register = tk.Button(self.master, text = "Register", command= self.ten,width=10)
         self.button_register.place(x=200, y=300)
 
     def ten (self):
