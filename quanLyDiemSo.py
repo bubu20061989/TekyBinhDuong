@@ -1,6 +1,7 @@
 import tkinter as tk
 from tkinter import ttk
 from tkinter import messagebox
+import main
 
 class quanLyDiemSo:
     def __init__(self,master):
@@ -88,14 +89,17 @@ class quanLyDiemSo:
             return False
         return True
     def check_submit(self):
-        if self.checkInput()== True:
-            username = self.entry_username.get()
-            classs = self.entry_class.get()
-            literature = self.entry_point_literature.get()
-            math = self.entry_point_math.get()
-            english = self.entry_point_english.get()
-            chemistry = self.entry_point_chemistry.get()
-            physic = self.entry_point_physic.get()
+        if self.checkInput():
+            student_data = {
+                "name": self.entry_username.get(),
+                "grade": self.entry_class.get(),
+                "math_point": float(self.entry_point_math.get()),
+                "literature_point": float(self.entry_point_literature.get()),
+                "english_point": float(self.entry_point_english.get()),
+                "chemistry_point": float(self.entry_point_chemistry.get()),
+                "physic_point": float(self.entry_point_physic.get())
+            }
+            main.save_to_json(student_data)
             
     
             
