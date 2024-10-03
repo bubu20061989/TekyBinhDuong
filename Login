@@ -28,13 +28,15 @@ class login :
         self.button_register.place(x=200, y=200)
         
         
+         
     def login(self):
         if not self.entry_mat_khau.get() or not self.entry_user_name.get():
             messagebox.showerror(title='Error', message='Bạn chưa nhập đủ thông tin')
+        if not self.entry_user_name.get()=="admin" and self.entry_mat_khau.get()=="123456":
+             messagebox.showerror(title='Error', message="Tên người dùng hoặc mật khẩu bị sai")
         if self.entry_mat_khau.get() == '123456' and self.entry_user_name.get() == 'admin':
             self.master.destroy()
             self.openMenu()
-            
     def openMenu(self):
         root = tk.Tk()
         app = MenuApp(root)
