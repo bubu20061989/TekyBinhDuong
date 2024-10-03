@@ -1,5 +1,6 @@
 import tkinter as tk
 from tkinter import ttk
+import main
 
 class quanLyChuyenCan:
     def __init__(self, master):
@@ -52,10 +53,16 @@ class quanLyChuyenCan:
         liDoNghiHoc = ttk.Combobox(self.master, width=self.widthEntry, textvariable=self.liDoNghiHocValue)
         liDoNghiHoc['values'] = ("Bị ốm", "Ngủ quên", "Có việc") 
         liDoNghiHoc.place(x=self.x + 100, y=self.Tlbly * 3)
-
+        
     def luuLopHoc(self):
-        # Implement save functionality here
-        pass
+        student_data = {
+            "Hoc sinh nghi hoc": self.entry_HSNghiHoc.get(),
+            "Lop": self.entry_lop_hoc.get(),
+            "Co phep/Ko phep": self.CPvaKPValue.get(),
+            "Ly do nghi": self.liDoNghiHocValue.get()
+        }
+        main.save_to_json(student_data,'./data/quanLyChuyenCan.json')
+
 
 if __name__ == "__main__":
     root = tk.Tk()
