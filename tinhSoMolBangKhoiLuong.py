@@ -1,4 +1,6 @@
 import tkinter as tk
+from tkinter import messagebox
+
  
 from tkinter import Menu
 class tinhSoMolBangKhoiLuong:
@@ -28,11 +30,17 @@ class tinhSoMolBangKhoiLuong:
         # button
         self.tinh_so_mol_button = tk.Button(self.master, text='TÍNH', command=self.calculator,width=self.width)
         self.tinh_so_mol_button.place(x=self.Tx + 150 , y=self.Tx - 10)
+    def checkInput(self):
+        if self.entry_khoi_luong.get()<0 or self.entry_khoi_luong_rieng<0:
+             messagebox.showerror(title='Error', message="Vui lòng nhập giá trị dương")
+        else:
+            self.calculator()
+
     def calculator(self):
         m = float(self.entry_khoi_luong.get())
         M = float(self.entry_khoi_luong_rieng.get())
         answer = m/M
-        print("Số mol là:",answer)
+        messagebox.showinfo(title='Answer', message=answer)
         
         
 if __name__ == "__main__":
