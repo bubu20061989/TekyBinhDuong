@@ -50,7 +50,7 @@ class tinhPhuongTrinhBac2:
         so_a = float(self.entry_so_a.get())
         so_b = float(self.entry_so_b.get())
         so_c= float(self.entry_so_c.get())
-        
+         
         delta = so_b*so_b - 4*so_a*so_c
         
         if delta < 0:
