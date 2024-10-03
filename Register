@@ -50,16 +50,16 @@ class register :
         self.button_register.place(x=200, y=300)
 
     def ten (self):
-        username=self.entry_username.get()
-        print(username)
-        keyword=self.entry_keyword.get()
-        print(keyword)
-        cfkeyword=self.entry_cfkeyword.get()
-        print(cfkeyword)
-        gioitinh=self.entry_gioitinh.get()
-        print(gioitinh)
-        email=self.entry_email.get()
-        print(email)
+        if self.checkInput():
+            student_data = {
+                "name": self.entry_username.get(),
+                "keyword": self.entry_keyword.get(),
+                "cfkeyword": float(self.entry_cfkeyword.get()),
+                "gioitinh": float(self.entry_gioitinh.get()),
+                "email": float(self.entry_email.get()),
+                
+            }
+            self.save_to_json(student_data,'./data/Register.json')
 
 if __name__=="__main__":
 
