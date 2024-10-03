@@ -7,7 +7,7 @@ import quanLyHocTap
 import quanLyLopHoc
 import tinhSoMolBangKhoiLuong
 import tinhSoMolBangTheTich
-
+import tinhPhuongTrinhBacMot
 
 
 class MenuApp:
@@ -46,11 +46,17 @@ class MenuApp:
 
         self.new_item.add_command(label="Quản lý chuyên cần", command=self.open_quan_ly_chuyen_can) 
 
-        #Môn
+        #Môn hóa
         self.new_item3 = Menu(self.menu, tearoff=0)
         self.new_item2.add_cascade(label="Hóa",menu=self.new_item3)
         self.new_item3.add_command(label="Tính số mol bằng khối lượng", command =self.open_tinh_so_mol_bang_khoi_luong)
         self.new_item3.add_command(label="Tính số mol bằng thể tích",command =self.open_tinh_so_mol_bang_the_tich)
+        
+        #môn toán
+        self.new_item4 = Menu(self.menu, tearoff= 0)
+        self.new_item2.add_cascade(label="Toán", menu=self.new_item4)
+        self.new_item4.add_command(label="Tính phương trình bậc 1", command =self.open_tinh_phuong_trinh_bac_mot)
+        
 
 
         # Frame to hold the content
@@ -108,7 +114,11 @@ class MenuApp:
             widget.destroy()
         # Load the attendance management interface
         app = tinhSoMolBangTheTich.tinhSoMolBangTheTich(self.content_frame)
-        
+    def open_tinh_phuong_trinh_bac_mot(self):
+        for widget in self.content_frame.winfo_children():
+            widget.destroy()
+        # Load the attendance management interface
+        app = tinhPhuongTrinhBacMot.tinhPhuongTrinhBacMot(self.content_frame)    
 
 
 if __name__ == "__main__":

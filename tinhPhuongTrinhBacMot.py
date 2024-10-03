@@ -2,11 +2,11 @@ import tkinter as tk
 from tkinter import ttk 
 from tkinter import messagebox
 
-class register : 
+class tinhPhuongTrinhBacMot : 
     def __init__(self,master):
         self.master = master
-        self.master.title("dragon")
-        self.master.geometry('400x400')
+        #self.master.title("dragon")
+        #self.master.geometry('400x400')
         self.widthEntry=40
         
         self.label_a = tk.Label(self.master,text="Nhập a ")
@@ -46,5 +46,5 @@ class register :
 if __name__=="__main__":
 
     root = tk.Tk()
-    app = register(root)
+    app = tinhPhuongTrinhBacMot(root)
     root.mainloop()
