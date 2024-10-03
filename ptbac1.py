@@ -21,7 +21,7 @@ class register :
         self.entry_b = tk.Entry(self.master,width = self.widthEntry)
         self.entry_b.place (x =100 ,  y = 60)
 
-        self.button_tinh = tk.Button(self.master, text = "Tính nghiệm ab ", command= self.master,width=20)
+        self.button_tinh = tk.Button(self.master, text = "Tính nghiệm ab ", command= self.nghiem,width=20)
         self.button_tinh.place(x=200, y=100)
         
     def nghiem (self):
