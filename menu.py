@@ -5,6 +5,8 @@ import quanLyDiemSo
 import quanLyHocSinh
 import quanLyHocTap
 import quanLyLopHoc
+import tinhSoMolBangKhoiLuong
+import tinhSoMolBangTheTich
 
 
 
@@ -17,12 +19,17 @@ class MenuApp:
         # Initialize the menu
         self.menu = Menu(master)
         self.master.config(menu=self.menu)
+        
 
         # Add main menu items
         self.new_item = Menu(self.menu, tearoff=0)
+        self.new_item2 = Menu(self.menu, tearoff=0)
         self.menu.add_cascade(label="Quản lý", menu=self.new_item)
 
+        self.menu.add_cascade(label="Môn", menu=self.new_item2)
+        # self.new_item.add_cascade(label="Tính số mol",new_item=self.new_item)
         self.new_item.add_separator()
+        self.new_item2.add_separator()
 
 
         
@@ -36,6 +43,14 @@ class MenuApp:
         self.new_item.add_command(label="Quản lý học tập", command=self.open_quan_ly_hoc_tap)
         
         self.new_item.add_command(label="Quản lý lớp học", command=self.open_quan_ly_lop_hoc)
+
+        self.new_item.add_command(label="Quản lý chuyên cần", command=self.open_quan_ly_chuyen_can) 
+
+        #Môn
+        self.new_item3 = Menu(self.menu, tearoff=0)
+        self.new_item2.add_cascade(label="Hóa",menu=self.new_item3)
+        self.new_item3.add_command(label="Tính số mol bằng khối lượng", command =self.open_tinh_so_mol_bang_khoi_luong)
+        self.new_item3.add_command(label="Tính số mol bằng thể tích",command =self.open_tinh_so_mol_bang_the_tich)
 
 
         # Frame to hold the content
@@ -83,7 +98,17 @@ class MenuApp:
             widget.destroy()
         # Load the attendance management interface
         app = quanLyLopHoc.quanLyLopHoc(self.content_frame)
-
+    def open_tinh_so_mol_bang_khoi_luong(self):
+        for widget in self.content_frame.winfo_children():
+            widget.destroy()
+        # Load the attendance management interface
+        app = tinhSoMolBangKhoiLuong.tinhSoMolBangKhoiLuong(self.content_frame)
+    def open_tinh_so_mol_bang_the_tich(self):
+        for widget in self.content_frame.winfo_children():
+            widget.destroy()
+        # Load the attendance management interface
+        app = tinhSoMolBangTheTich.tinhSoMolBangTheTich(self.content_frame)
+        
 
 
 if __name__ == "__main__":

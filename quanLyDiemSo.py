@@ -6,8 +6,8 @@ import main
 class quanLyDiemSo:
     def __init__(self,master):
         self.master = master
-        self.master.title("Quản lí Học Sinh")
-        self.master.geometry("400x400")
+        #self.master.title("Quản lí Học Sinh")
+        #self.master.geometry("400x400")
         
         self.widthEntry = self.width = 45
         self.width = 5
