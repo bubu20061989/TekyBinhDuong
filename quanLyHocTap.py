@@ -1,11 +1,11 @@
 import tkinter as tk 
 from tkinter import ttk 
 
-class dragon :
+class quanLyHocTap :
     def __init__(self,master):
         self.master = master
-        self.master.title("dragon")
-        self.master.geometry('400x400')
+        #self.master.title("dragon")
+        #self.master.geometry('400x400')
 
         self.widthEntry = self.width = 45
         self.width = 5
@@ -73,7 +73,7 @@ class dragon :
 if __name__=="__main__":
 
     root = tk.Tk()
-    app = dragon(root)
+    app = quanLyHocTap(root)
     root.mainloop()
     
     

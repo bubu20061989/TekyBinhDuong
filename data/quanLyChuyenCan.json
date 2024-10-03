@@ -10,5 +10,17 @@
         "Lop": "9A3",
         "Co phep/Ko phep": "Ko Phép",
         "Ly do nghi": "Ngủ quên"
+    },
+    {
+        "Hoc sinh nghi hoc": "NGuyen",
+        "Lop": "10",
+        "Co phep/Ko phep": "Có phép",
+        "Ly do nghi": "Bị ốm"
+    },
+    {
+        "Hoc sinh nghi hoc": "",
+        "Lop": "",
+        "Co phep/Ko phep": "Không phép",
+        "Ly do nghi": "Ngủ quên"
     }
 ]

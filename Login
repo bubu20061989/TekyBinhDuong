@@ -30,7 +30,7 @@ class login :
         
     def login(self):
         if not self.entry_mat_khau.get() or not self.entry_user_name.get():
-            messagebox.showerror(title='Error', message='Bạn chưa đủ thông tin')
+            messagebox.showerror(title='Error', message='Bạn chưa nhập đủ thông tin')
         if self.entry_mat_khau.get() == '123456' and self.entry_user_name.get() == 'admin':
             self.master.destroy()
             self.openMenu()

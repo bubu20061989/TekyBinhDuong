@@ -3,8 +3,8 @@ from tkinter import messagebox
 class quanLyLopHoc:
     def __init__(self,master):
         self.master = master
-        self.master.title("Quản lý lớp học")
-        self.master.geometry('400x400')
+        #self.master.title("Quản lý lớp học")
+        #self.master.geometry('400x400')
         
         self.widthEntry = 45
         self.width = 5

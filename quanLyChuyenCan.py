@@ -7,7 +7,7 @@ class quanLyChuyenCan:
         self.master = master
 
         # Remove geometry setting from here
-        self.master.geometry('400x400')  # Remove this line
+        #self.master.geometry('400x400')  # Remove this line
 
         self.widthEntry = 45
         self.width = 5

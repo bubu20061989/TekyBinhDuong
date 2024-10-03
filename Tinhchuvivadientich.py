@@ -4,8 +4,8 @@ from tkinter import ttk
 class register : 
     def __init__(self,master):
         self.master = master
-        self.master.title("dragon")
-        self.master.geometry('400x400')
+        #self.master.title("dragon")
+        #self.master.geometry('400x400')
         self.widthEntry=40
         
         self.label_chuvi = tk.Label(self.master,text="Nhập phép tính về chu vi ")
