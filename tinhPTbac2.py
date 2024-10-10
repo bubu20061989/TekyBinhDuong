@@ -55,7 +55,7 @@ class tinhPhuongTrinhBac2:
         
         if delta < 0:
             ketQua = 'Phương trình có vô nghiệm' 
-            messagebox.showinfor(title='Kết quả', message=ketQua)
+            messagebox.showinfo(title='Kết quả', message=ketQua)
         if delta == 0:
             ketQua = 'Phương trình có nghiệm kép' + str(-so_b/so_a)
             messagebox.showerror(title='Kết quả', message=ketQua)
