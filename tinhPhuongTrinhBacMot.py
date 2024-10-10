@@ -28,10 +28,10 @@ class tinhPhuongTrinhBacMot :
         if not self.entry_a.get() or not self.entry_b.get():
             messagebox.showerror(title='Error', message='Bạn chưa nhập đủ dữ liệu')
         else:
-            a = float(self.entry_a.get()),
-            b = float(self.entry_b.get()),
+            a = float(self.entry_a.get())
+            b = float(self.entry_b.get())
             
-            ketQua = 'Nghiệm của phương trình ' + str(-b/a)
+            ketQua = 'Nghiệm của phương trình ' , str(-b/a)
             messagebox.showerror(title='Kết quả', message=ketQua)
 
             
