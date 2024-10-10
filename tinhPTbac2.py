@@ -7,8 +7,8 @@ import math
 class tinhPhuongTrinhBac2:
     def __init__(self,master):
         self.master = master
-        self.master.title("Quản lí Học Sinh")
-        self.master.geometry("400x400")
+        #self.master.title("Quản lí Học Sinh")
+        #self.master.geometry("400x400")
         
         self.widthEntry = self.width = 45
         self.width = 15
@@ -55,7 +55,7 @@ class tinhPhuongTrinhBac2:
         
         if delta < 0:
             ketQua = 'Phương trình có vô nghiệm' 
-            messagebox.showinfor(title='Kết quả', message=ketQua)
+            messagebox.showinfo(title='Kết quả', message=ketQua)
         if delta == 0:
             ketQua = 'Phương trình có nghiệm kép' + str(-so_b/so_a)
             messagebox.showerror(title='Kết quả', message=ketQua)

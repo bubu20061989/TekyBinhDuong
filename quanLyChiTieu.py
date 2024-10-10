@@ -4,8 +4,8 @@ from tkinter import Menu
 class menu:
     def __init__(self,master):
         self.master = master
-        self.master.title("")
-        self.master.geometry("400x400")
+        #self.master.title("")
+        #self.master.geometry("400x400")
         #khởi tạo menu
         self.menu = Menu(master)
         self.master.config(menu=self.menu)

@@ -3,11 +3,11 @@ from tkinter import ttk
 from tkinter import messagebox
 
 
-class vatli : 
+class doiDonVi : 
     def __init__(self,master):
         self.master = master
-        self.master.title("dragon")
-        self.master.geometry('400x400')
+        #self.master.title("dragon")
+        #self.master.geometry('400x400')
         self.widthEntry=40
         
         self.label_nhap_so_can_doi = tk.Label(self.master,text="Nhập số cần quy đổi ")
@@ -90,7 +90,7 @@ class vatli :
                 
                 
                 
-            messagebox.showerror(title='Kết quả', message=str(ketQuaQuiDoi))
+            messagebox.showinfo(title='Kết quả', message=str(ketQuaQuiDoi))
        
         
         
@@ -120,5 +120,5 @@ class vatli :
 if __name__=="__main__":
 
     root = tk.Tk()
-    app = vatli(root)
+    app = doiDonVi(root)
     root.mainloop()

@@ -8,8 +8,8 @@ from tkinter.ttk import *
 class tinhSVT : 
     def __init__(self,master):
         self.master = master
-        self.master.title("dragon")
-        self.master.geometry('400x400')
+        #self.master.title("")
+        #self.master.geometry('400x400')
         self.widthEntry=40
         
         self.x = 0

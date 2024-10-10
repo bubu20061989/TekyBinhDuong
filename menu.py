@@ -8,7 +8,9 @@ import quanLyLopHoc
 import tinhSoMolBangKhoiLuong
 import tinhSoMolBangTheTich
 import tinhPhuongTrinhBacMot
-
+import tinhPTbac2
+import tinhSVT
+import doiDonVi
 
 class MenuApp:
     def __init__(self, master):
@@ -57,8 +59,17 @@ class MenuApp:
         self.new_item2.add_cascade(label="Toán", menu=self.new_item4)
         self.new_item4.add_command(label="Tính phương trình bậc 1", command =self.open_tinh_phuong_trinh_bac_mot)
         
+        self.new_item5 = Menu(self.menu, tearoff= 0)
+        self.new_item4.add_command(label="Tính phương trình bậc 2", command =self.open_tinh_phuong_trinh_bac_hai)
 
+        
+        self.new_item6 = Menu(self.menu, tearoff= 0)
+        self.new_item2.add_cascade(label="Vật lí", menu = self.new_item6)
+        self.new_item6.add_command(label="Tính SVT", command =self.open_tinh_SVT)
 
+        self.new_item7 = Menu(self.menu, tearoff= 0)
+
+        self.new_item6.add_command(label="Đổi đơn vị", command =self.open_doiDonVi)
         # Frame to hold the content
         self.content_frame = tk.Frame(self.master)
         self.content_frame.pack(fill=tk.BOTH, expand=True)
@@ -119,8 +130,21 @@ class MenuApp:
             widget.destroy()
         # Load the attendance management interface
         app = tinhPhuongTrinhBacMot.tinhPhuongTrinhBacMot(self.content_frame)    
-
-
+    def open_tinh_phuong_trinh_bac_hai(self):
+        for widget in self.content_frame.winfo_children():
+            widget.destroy()
+        # Load the attendance management interface
+        app = tinhPTbac2.tinhPhuongTrinhBac2(self.content_frame)  
+    def open_tinh_SVT(self):
+        for widget in self.content_frame.winfo_children():
+            widget.destroy()
+        # Load the attendance management interface
+        app = tinhSVT.tinhSVT(self.content_frame)
+    def open_doiDonVi(self):
+        for widget in self.content_frame.winfo_children():
+            widget.destroy()
+        # Load the attendance management interface
+        app = doiDonVi.doiDonVi(self.content_frame)    
 if __name__ == "__main__":
     root = tk.Tk()
     app = MenuApp(root)

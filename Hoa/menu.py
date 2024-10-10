@@ -39,6 +39,8 @@ class MenuApp:
         # Load the attendance management interface
         app = tinhSoMolBangTheTich.tinhSoMolBangTheTich(self.content_frame)
         
+    
+        
         
 if __name__ == "__main__":
     root = tk.Tk()
